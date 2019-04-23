@@ -6,10 +6,10 @@ This plugin to define the *less* and *more* functions.
 
 ## Install
 
-[Fisherman](https://github.com/fisherman/fisherman)
+[Fisher](https://github.com/jorgebucaran/fisher)
 
 ```fish
-fisher install decors/fish-highlight
+fisher add decors/fish-highlight
 ```
 
 [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
