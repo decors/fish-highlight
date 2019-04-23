@@ -1,5 +1,5 @@
 function less
     set -lx LESS '-R'
-    type -q highlight-lesspipe; and set -lx LESSOPEN '| highlight-lesspipe %s'
+    type -q highlight; and set -lx LESSOPEN '| highlight %s'
     command less $argv
 end
