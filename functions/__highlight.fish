@@ -1,5 +1,15 @@
 function __highlight
-    set -q highlight_format; or set -l highlight_format ansi
+    set -l theme
+    set -l base16
+    if set -q highlight_theme
+        set theme $highlight_theme
+        if string match -qr "^base16/" $highlight_theme
+            set base16 "--base16"
+            set theme (string sub -s 8 $highlight_theme)
+        end
+    else
+        set theme edit-vim-dark
+    end
 
-    command highlight -O $highlight_format --force $argv 2> /dev/null
+    command highlight -O xterm256 --style=$theme $base16 --force $argv 2> /dev/null
 end
